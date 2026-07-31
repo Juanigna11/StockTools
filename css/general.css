@@ -1,0 +1,137 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variables*/
+
+:root{
+    
+  --dark:#22262b;
+  --dark-2:#2c3138;
+  --steel:#555c66;
+  --paper:#eef0ea;
+  --paper-2:#ffffff;
+  --green:#7cbf3f;
+  --green-deep:#487926;
+  --yellow:#fbff00;
+  --text:#23262b;
+  --text-soft:#5b5f66;
+  --display:'Big Shoulders Display', sans-serif;
+  --body:'Work Sans', sans-serif;
+  --mono:'IBM Plex Mono', monospace;
+
+  --max-width:1100px;
+      
+}
+
+body{
+    background-color: var(--paper);
+    color: var(--text);
+    line-height:1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family:var(--mono);
+}
+
+h1,h2,h3{
+    font-family:var(--display); 
+    letter-spacing:.2px; 
+    margin:0 0 .4em;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    background-color: var(--dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.logo img{
+    margin-right: 0.4rem;
+    width:50px;
+}
+
+.nav-links{
+    display: flex;
+    gap:1.8rem;
+}
+
+.nav-links li a{
+    font-weight: 550;
+    color: var(--paper-2);
+    font-size: 0.45re;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .footer-nav a:hover, .footer-social a:hover{
+    color: var(--green);
+   
+}
+
+footer{
+    background-color: #2c3138;
+    color: var(--paper-2);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: auto;
+
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav a, .footer-social a{
+    transition: color 0.2s;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+@media(max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
