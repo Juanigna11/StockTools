@@ -6,7 +6,7 @@
   background-position: center;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 80px 160px 80px 210px;
     
 }
 
@@ -29,12 +29,12 @@
 
 
 .hero-grid{
-  padding:70px 0 40px;  
+  padding: 80px 160px 80px 160px;
   display:grid; 
   grid-template-columns:1.1fr .9fr; 
   gap:100px; 
   align-items:center;
-  margin-left: 120px;
+  
 }
 
 .accent{

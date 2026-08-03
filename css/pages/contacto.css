@@ -1,0 +1,112 @@
+h2{
+    color: var(--text);
+    font-size: 50px;
+}
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+}
+.wrap {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 24px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 150px 0 0 0;
+}
+
+.contacto {
+    padding: 80px 0;
+}
+
+@media (max-width: 900px) {
+    .hero-grid, .mayoristas-grid, .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body);
+    color: var(--text);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+}
+
+.contact-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
+}
+
+.info-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
+}
+
+.section-sub {
+    max-width: 520px;
+    margin-top: -8px;
+}
+
+p {
+    line-height: 1.55;
+    color: var(--text-soft);
+}
+
+.form-row {
+    display: flex;
+    gap: 14px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(34, 38, 43, .15);
+    border-radius: var(--radius-sm);
+    font-family: var(--body);
+    font-size: .92rem;
+    background: #fff;
+    resize: vertical;
+}
+
+.btn-accent {
+    background: var(--green);
+    color: #12210a;
+}
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: .95rem;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
