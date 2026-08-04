@@ -2,18 +2,21 @@
     background:var(--dark); 
     color:#fff; 
     padding:80px 160px 80px 160px;
-}
+} 
+
 .mayoristas h2{
     color:#fff; 
     font-size:2.1rem; 
     max-width:520px;
 }
+
 .mayoristas-grid{
     display:grid; 
     grid-template-columns:1.1fr .9fr; 
     gap:50px; 
     align-items:center;
 }
+
 .benefit-list{
     list-style:none; 
     padding:0; margin:24px 0 30px; 
@@ -21,28 +24,34 @@
     flex-direction:column; 
     gap:14px;
 }
+
 .benefit-list li{
     padding-left:28px; 
     position:relative; 
     color:#d4d6d2;
 }
+
 .benefit-list li::before{
     content:"✓"; 
     position:absolute; 
     left:0; 
     color:var(--green); 
-    font-weight:700;}
+    font-weight:700;
+}
+
 .quote-card{
   background:var(--dark-2); 
   border-radius:var(--radius-lg); 
   padding:34px;
   border-left:4px solid var(--yellow);
 }
+
 .quote-card p{
     color:#e7e8e4; 
     font-size:1.1rem; 
     font-style:italic;
 }
+
 .quote-card span{
     display:block; 
     margin-top:16px; 

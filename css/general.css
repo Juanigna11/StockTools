@@ -30,7 +30,6 @@
       
 }
 
-
 body{
     background-color: var(--paper);
     color: var(--text);
@@ -53,7 +52,6 @@ h4{
     font-family: var(--display);
     font-size: 20px;
 }   
-
 
 img{
     max-width: 100%;
@@ -129,8 +127,6 @@ button:hover{
     color: var(--green);
    
 }
-
-
 
 footer{
     background-color: #2c3138;

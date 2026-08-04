@@ -20,6 +20,7 @@ h1{
     justify-content: center;
 
 }
+
 .marcas{
     max-width: 100px;
     border-radius: var(--radius-md);
@@ -33,9 +34,6 @@ h1{
     
 }
     
-    
-    
-
 .gallery{
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +48,7 @@ h1{
     border-radius: 8px;
     transition: trasform 0,3s;
 }
+
 .gallery-item:hover{
     transform: scale(1.05);
 } 
