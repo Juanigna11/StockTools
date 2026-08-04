@@ -44,7 +44,7 @@ body{
 h1,h2,h3{
     font-family:var(--display); 
     letter-spacing:.2px; 
-    margin:0 0 .4em;
+    margin:0 0 .4rem;
     color: #eef0ea;
 }
 
@@ -166,6 +166,12 @@ footer{
     font-size: 3rem;
     margin: 2rem;
     color: var(--dark-2);
+}
+
+.main-section{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1 rem 2rem 3 rem;
 }
 
 @media(max-width: 768px){

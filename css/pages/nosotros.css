@@ -1,0 +1,55 @@
+h1{
+    color: var(--dark);
+}
+
+.parrafo{   
+    font-size: 35px;
+    background:var(--green); 
+    color:#fff; border:none; 
+    border-radius: 40px;
+    padding: 10px 22px; 
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 0 2rem 13.1rem;
+}
+
+.marcas-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+}
+.marcas{
+    max-width: 100px;
+    border-radius: var(--radius-md);
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+    
+    
+    
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.gallery-item{
+    flex: 1 1 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: trasform 0,3s;
+}
+.gallery-item:hover{
+    transform: scale(1.05);
+} 
