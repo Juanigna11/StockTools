@@ -1,7 +1,16 @@
+
 .search-bar{
-  display: flex;
-  margin: 0 0 40px 500px ;
+  display:flex; 
+  gap:10px; 
+  margin:28px 0; 
+  max-width:520px;
   
+}
+
+.buscador{
+   display: flex;
+   justify-content: center;
+    
 }
 
 .card-grid{

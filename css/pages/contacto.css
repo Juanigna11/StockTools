@@ -37,13 +37,6 @@ div {
     unicode-bidi: isolate;
 }
 
-body {
-    margin: 0;
-    font-family: var(--body);
-    color: var(--text);
-    background: var(--paper);
-    -webkit-font-smoothing: antialiased;
-}
 
 .contact-form {
     margin-top: 24px;

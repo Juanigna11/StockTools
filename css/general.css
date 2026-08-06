@@ -37,7 +37,10 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family:var(--mono);
+    margin: 0;
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+
 }
 
 h1,h2,h3{
@@ -52,6 +55,7 @@ h4{
     font-family: var(--display);
     font-size: 20px;
 }   
+
 
 img{
     max-width: 100%;
