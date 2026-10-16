@@ -1,79 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockTools - Inicio</title>
-    <link rel="" href="js.js">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">  
-    <script src="https://kit.fontawesome.com/c32a0c7e4b.js" crossorigin="anonymous"></script>       
-    <link rel="icon" href="assets/logo llave.png">                                                                            
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c32a0c7e4b.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/logo llave.png">
 </head>
-  <body>
+<body>
     <header>
         <nav class="navbar">
-            <a href="./index.html" class="logo"><img src="assets/logo sin llave.png" alt=""></a>
-            <button class="iniciar-sesion" type="submit">Iniciar sesión</button>
+            <a href="./index.html" class="logo"><img src="assets/logo.png" alt="StockTools - Inicio"></a>
             <ul class="nav-links">
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>               
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
+            <button class="btn-carrito-header" id="abrirCarrito" type="button" aria-label="Abrir carrito">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM1 2h3.27l.94 2H21a1 1 0 0 1 .96 1.27l-2.5 8.5A2 2 0 0 1 17.54 15H8.1l-1.1 2H19v2H7a2 2 0 0 1-1.75-2.97L6.6 13.6 3 4H1V2Zm6.16 4 2.18 7h8.2l2.06-7H7.16Z"/></svg>
+                <span class="carrito-contador" id="contadorCarrito" hidden>0</span>
+            </button>
+            <button class="iniciar-sesion" type="button">Iniciar sesión</button>
         </nav>
     </header>
-      <main>
-        <section class="hero" id="top">
-          <div class="wrap hero-grid">
-            <div class="hero-copy">
-              <span class="banda">Stock permanente · Envíos a todo el país</span>
-              <h1>Lo que tu ferretería necesita, <span class="accent">siempre en stock.</span></h1>
-              <p>Herramientas, fijaciones e insumos al por mayor y menor. Precios de fábrica, entrega rápida y el catálogo completo a un clic.</p>
-              <form class="search-bar" id="searchForm" role="search">
-                <input type="text" id="searchInput" placeholder="Buscar taladros, tornillos, sierras…" aria-label="Buscar productos">
-                <button type="submit">Buscar</button>
-              </form>
-              <div class="hero-stats">
-                <div><strong>+3.200</strong><span>productos</span></div>
-                <div><strong>48hs</strong><span>entrega CABA/GBA</span></div>
-                <div><strong>+600</strong><span>ferreterías clientas</span></div>
-              </div>
+
+    <main>
+        <!-- 1. Portada -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <span class="banda">Stock permanente · Envíos a todo el país</span>
+                    <h1>Lo que tu ferretería necesita, <span class="accent">siempre en stock.</span></h1>
+                    <p class="hero-texto">Herramientas, fijaciones e insumos al por mayor y menor. Precios de fábrica, entrega rápida y el catálogo completo a un clic.</p>
+                    <!-- El buscador manda lo escrito a productos.html?q=... y ahí se filtra -->
+                    <form class="search-bar" action="productos.html" role="search">
+                        <input type="search" name="q" placeholder="Buscar taladros, tornillos, sierras…" aria-label="Buscar productos">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <p class="hero-sugerencias">
+                        Lo más buscado:
+                        <a href="productos.html?q=taladros">Taladros</a>
+                        <a href="productos.html?q=amoladoras">Amoladoras</a>
+                        <a href="productos.html?q=llaves">Llaves</a>
+                        <a href="productos.html?q=medicion">Medición</a>
+                    </p>
+                    <div class="hero-stats">
+                        <div><strong>+3.200</strong><span>productos</span></div>
+                        <div><strong>48hs</strong><span>entrega CABA/GBA</span></div>
+                        <div><strong>+600</strong><span>ferreterías clientas</span></div>
+                    </div>
+                </div>
+                <!-- La oferta de la semana se completa desde inicio.js con datos del catálogo -->
+                <aside class="oferta-semana" id="ofertaSemana" aria-label="Oferta de la semana"></aside>
             </div>
-          </div>  
         </section>
-        <section class="mayoristas" id="mayoristas">
-          <div class="wrap mayoristas-grid">
-            <div>
-              <span class="eyebrow eyebrow-dark">Cuentas mayoristas</span>
-              <h2>Precios especiales para ferreterías y corralones</h2>
-              <ul class="benefit-list">
-                <li>Lista de precios mayorista actualizada mensualmente</li>
-                <li>Reposición programada de tu stock crítico</li>
-                <li>Asesor comercial asignado a tu cuenta</li>
-                <li>Facturación y logística para envíos recurrentes</li>
-              </ul>
-              <a href="#contacto" class="btn btn-light">Quiero ser cliente mayorista</a>
+
+        <!-- 2. Beneficios -->
+        <section class="ini-beneficios">
+            <div class="wrap ini-beneficios-grid">
+                <div><i class="fa-solid fa-truck-fast"></i><p><strong>Envío gratis</strong><span>en compras desde $50.000</span></p></div>
+                <div><i class="fa-solid fa-credit-card"></i><p><strong>Hasta 12 cuotas</strong><span>sin interés con tarjeta</span></p></div>
+                <div><i class="fa-solid fa-shield-halved"></i><p><strong>Garantía oficial</strong><span>la gestionamos nosotros</span></p></div>
+                <div><i class="fa-solid fa-headset"></i><p><strong>Asesor asignado</strong><span>para cuentas mayoristas</span></p></div>
             </div>
-            <div class="quote-card">
-              <p>"Desde que compramos con Stock Tools nunca más nos quedamos sin mecha ni disco de corte. La reposición llega antes de que se note el faltante."</p>
-              <span>— Ferretería El Tornillo Feliz, Córdoba</span>
-            </div>
-          </div>
         </section>
-      </main>
+
+        <!-- 3. Categorías (se arman desde inicio.js) -->
+        <section class="ini-seccion">
+            <div class="wrap">
+                <div class="ini-encabezado">
+                    <div>
+                        <span class="eyebrow">Categorías</span>
+                        <h2 class="ini-titulo">¿Qué estás buscando?</h2>
+                    </div>
+                    <a href="./productos.html" class="ini-ver-todo">Ver todo el catálogo →</a>
+                </div>
+                <div class="ini-categorias" id="categorias"></div>
+            </div>
+        </section>
+
+        <!-- 4. Destacados: misma card que en Productos (catalogo.js) -->
+        <section class="ini-seccion ini-destacados">
+            <div class="wrap">
+                <div class="ini-encabezado">
+                    <div>
+                        <span class="eyebrow">Destacados</span>
+                        <h2 class="ini-titulo">Los que más salen del mostrador</h2>
+                    </div>
+                    <a href="./productos.html" class="ini-ver-todo">Ver todos los productos →</a>
+                </div>
+                <div class="grilla-productos" id="destacados"></div>
+            </div>
+        </section>
+
+        <!-- 5. Mayoristas -->
+        <section class="mayoristas">
+            <div class="wrap mayoristas-grid">
+                <div>
+                    <span>Cuentas mayoristas</span>
+                    <h2>Precios especiales para ferreterías y corralones</h2>
+                    <ul class="benefit-list">
+                        <li>Lista de precios mayorista actualizada mensualmente</li>
+                        <li>Reposición programada de tu stock crítico</li>
+                        <li>Asesor comercial asignado a tu cuenta</li>
+                        <li>Facturación y logística para envíos recurrentes</li>
+                    </ul>
+                    <a href="./contacto.html" class="btn btn-light">Quiero ser cliente mayorista</a>
+                </div>
+                <div class="quote-card">
+                    <p>"Desde que compramos con Stock Tools nunca más nos quedamos sin mecha ni disco de corte. La reposición llega antes de que se note el faltante."</p>
+                    <span>— Ferretería El Tornillo Feliz, Córdoba</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Marcas -->
+        <section class="ini-marcas">
+            <div class="wrap">
+                <p class="ini-marcas-titulo">Trabajamos con las marcas que tus clientes piden</p>
+                <div class="ini-marcas-fila">
+                    <img src="assets/images.jpeg" alt="Barovo" loading="lazy">
+                    <img src="assets/bosch.png" alt="Bosch" loading="lazy">
+                    <img src="assets/milwakie.jpeg" alt="Milwaukee" loading="lazy">
+                    <img src="assets/total.png" alt="Total" loading="lazy">
+                    <img src="assets/ronix.jpeg" alt="Ronix" loading="lazy">
+                    <img src="assets/black.png" alt="Black+Decker" loading="lazy">
+                    <img src="assets/de walt.jpeg" alt="DeWalt" loading="lazy">
+                    <img src="assets/makita.jpeg" alt="Makita" loading="lazy">
+                </div>
+                <a href="./nosotros.html" class="ini-ver-todo">Conocé más sobre nosotros →</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <ul class="footer-nav">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>               
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
         <div class="footer-social">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
-  </body>
+    <script src="JS/carrito.js"></script>
+    <script src="JS/catalogo.js"></script>
+    <script src="JS/inicio.js"></script>
+</body>
 </html>

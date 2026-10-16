@@ -1,48 +1,271 @@
-h1{
+/* =====================================================
+   nosotros.css — todo bajo clases propias (.nos-...)
+   para no pisar estilos de otras páginas.
+   ===================================================== */
+
+.eyebrow{
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: .8rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--green-deep);
+    margin-bottom: .6rem;
+}
+
+.nos-section{
+    padding: 72px 0;
+}
+
+.nos-titulo{
+    color: var(--dark);
+    font-size: clamp(2rem, 3.4vw, 2.8rem);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.nos-sub{
+    max-width: 620px;
+    font-family: var(--body);
+    color: var(--text-soft);
+    font-size: 1.05rem;
+}
+
+/* ===== 1. Intro ===== */
+.nos-intro{
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.nos-intro h1{
+    color: var(--dark);
+    font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+    line-height: 1.02;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.nos-intro h1 .accent{
+    color: var(--green);
+}
+
+.nos-intro p{
+    font-family: var(--body);
+    color: var(--text-soft);
+    margin-bottom: .9rem;
+}
+
+.nos-intro-img{
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border-bottom: 6px solid var(--green);
+}
+
+.nos-intro-img img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.nos-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin-top: 56px;
+    background: rgba(34, 38, 43, .12);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.nos-stats div{
+    background: var(--paper-2);
+    padding: 22px 20px;
+}
+
+.nos-stats strong{
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
     color: var(--dark);
 }
-.llamador-nosotros{
-    display: flex;
-    justify-content: center;
-    padding: 10px 22px; 
+
+.nos-stats span{
+    font-family: var(--body);
+    font-size: .9rem;
+    color: var(--text-soft);
 }
-.parrafo{   
-    font-size: 35px;
-    background:var(--green); 
-    color:#fff; border:none; 
-    border-radius: 40px;
-    padding: 10px 22px; 
-    
-    max-width: var(--max-width);
-    
+
+/* ===== 2. Marcas ===== */
+.nos-marcas{
+    background: var(--dark);
+}
+
+.nos-marcas .nos-titulo{
+    color: var(--paper-2);
+}
+
+.nos-marcas .nos-sub{
+    color: #c9ccc6;
+}
+
+.nos-marcas .eyebrow{
+    color: var(--green);
 }
 
 .marcas-grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
 }
 
 .marcas{
-    max-width: 100px;
+    aspect-ratio: 1;
     border-radius: var(--radius-md);
-    transition: transform .2s ease, box-shadow .2s ease;
+    overflow: hidden;
+    transition: transform .2s ease;
+}
+
+.marcas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.marcas:hover{
+    transform: translateY(-4px);
+}
+
+.marcas-nota{
+    margin-top: 2rem;
+    font-family: var(--mono);
+    font-size: .82rem;
+    color: var(--green);
+}
+
+/* ===== 3. Soluciones ===== */
+.soluciones-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.solucion{
+    background: var(--paper-2);
+    border-radius: var(--radius-md);
+    padding: 28px 26px;
+    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
+    border-top: 4px solid transparent;
+    transition: border-color .2s, transform .2s;
+}
+
+.solucion:hover{
+    border-top-color: var(--green);
+    transform: translateY(-3px);
+}
+
+.solucion i{
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--dark);
+    color: var(--green);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.solucion h3{
+    color: var(--dark);
+    font-size: 1.45rem;
+}
+
+.solucion p{
+    font-family: var(--body);
+    color: var(--text-soft);
+    font-size: .95rem;
+}
+
+/* ===== 4. Asesoramiento ===== */
+.nos-asesoria{
+    background: var(--paper-2);
+}
+
+.asesoria-grid{
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.pasos{
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    transition: transform .2s ease, box-shadow .2s ease;
-    display: flex;
-    margin-bottom: 30px;
-    
+    gap: 1.6rem;
+    counter-reset: paso;
 }
-    
+
+.pasos li{
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 1rem;
+    counter-increment: paso;
+}
+
+.pasos li::before{
+    content: "0" counter(paso);
+    grid-row: span 2;
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    color: var(--green-deep);
+    border-top: 2px solid var(--green);
+    padding-top: .4rem;
+}
+
+.pasos h3{
+    color: var(--dark);
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.pasos p{
+    font-family: var(--body);
+    color: var(--text-soft);
+    font-size: .95rem;
+}
+
+.asesor-card{
+    margin-top: 2rem;
+    background: var(--dark);
+    color: #e7e8e4;
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    border-left: 4px solid var(--yellow);
+}
+
+.asesor-card p{
+    font-family: var(--body);
+    font-style: italic;
+}
+
+.asesor-card span{
+    display: block;
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: .8rem;
+    color: var(--green);
+}
+
+/* ===== 5. Galería ===== */
 .gallery{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-
+    margin-top: 2rem;
 }
 
 .gallery-item{
@@ -50,9 +273,55 @@ h1{
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
-    transition: trasform 0,3s;
+    background: var(--paper-2);
+    transition: transform .3s;
 }
 
 .gallery-item:hover{
-    transform: scale(1.05);
-} 
+    transform: scale(1.03);
+}
+
+/* ===== 6. Llamado a la acción ===== */
+.nos-cta{
+    background: var(--green);
+    padding: 56px 0;
+}
+
+.nos-cta .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nos-cta h2{
+    color: var(--dark);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.1;
+    max-width: 640px;
+    margin: 0;
+}
+
+.nos-cta .acciones{
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+}
+
+.btn-dark{
+    background: var(--dark);
+    color: var(--paper-2);
+}
+
+@media (max-width: 900px){
+    .nos-intro, .asesoria-grid{
+        grid-template-columns: 1fr;
+    }
+    .nos-stats{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nos-section{
+        padding: 52px 0;
+    }
+}

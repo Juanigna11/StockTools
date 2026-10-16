@@ -1,64 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StockTools - Categorias</title>
+    <title>StockTools - Nosotros</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">  
-    <script src="https://kit.fontawesome.com/c32a0c7e4b.js" crossorigin="anonymous"></script>      
-    <link rel="icon" href="assets/logo llave.png">                                                                                
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c32a0c7e4b.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/logo llave.png">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <a href="./index.html" class="logo"><img src="assets/logo sin llave.png" alt=""></a>
+            <a href="./index.html" class="logo"><img src="assets/logo.png" alt="StockTools - Inicio"></a>
             <ul class="nav-links">
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>          
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
+            <button class="btn-carrito-header" id="abrirCarrito" type="button" aria-label="Abrir carrito">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM1 2h3.27l.94 2H21a1 1 0 0 1 .96 1.27l-2.5 8.5A2 2 0 0 1 17.54 15H8.1l-1.1 2H19v2H7a2 2 0 0 1-1.75-2.97L6.6 13.6 3 4H1V2Zm6.16 4 2.18 7h8.2l2.06-7H7.16Z"/></svg>
+                <span class="carrito-contador" id="contadorCarrito" hidden>0</span>
+            </button>
+            <button class="iniciar-sesion" type="button">Iniciar sesión</button>
         </nav>
-    </header>   
+    </header>
+
     <main>
-        <h1 class="page-title">Nosotros</h1>
-        <div class="llamador-nosotros">
-        <h2 class="parrafo">Tabajamos con marcas profesionales, acercandote novedades, confianza y garantia.</h2>
-        </div> 
-        <section class="marcas-grid">
-            <div class="marcas"><img src="assets/images.jpeg" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/bosch.png" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/milwakie.jpeg" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/total.png" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/ronix.jpeg" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/black.png" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/de walt.jpeg" alt="Barovo"></div>
-            <div class="marcas"><img src="assets/makita.jpeg" alt="Barovo"></div>
-        </section>
-            <section class="main-section">
-                <div class="gallery">
-                    <img class="gallery-item" src="assets/7863051-1-amoladora-angular-bosch-9-pulgadas-gws-20-230-2000w-02f5c21ff429ed893715955344651538-640-0.jpg" alt=""> 
-                    <img class="gallery-item" src="assets/638434286704555462.webp" alt="">
-                    <img class="gallery-item" src="assets/images (5).jpeg" alt="">
-                    <img class="gallery-item" src="assets/images (2).jpeg" alt="">
-                    <img class="gallery-item" src="assets/images (4).jpeg" alt="">
-                    <img class="gallery-item" src="assets/images (6).jpeg" alt="">
-                    <img class="gallery-item" src="assets/images (1).jpeg" alt="">
+        <!-- 1. Quiénes somos -->
+        <section class="nos-section">
+            <div class="wrap">
+                <div class="nos-intro">
+                    <div>
+                        <span class="eyebrow">Nosotros</span>
+                        <h1>No vendemos cajas. <span class="accent">Resolvemos tu mostrador.</span></h1>
+                        <p>StockTools nació para que las ferreterías y corralones tengan un proveedor que entienda su negocio: qué rota, qué se pide por temporada y qué no puede faltar nunca en la góndola.</p>
+                        <p>Trabajamos con marcas profesionales, te acercamos las novedades y respaldamos cada venta con garantía. Desde una caja de tornillos hasta el equipamiento completo de un local.</p>
+                    </div>
+                    <div class="nos-intro-img">
+                        <img src="assets/images (3).jpeg" alt="Exhibición de herramientas y organizadores">
+                    </div>
                 </div>
-            </section>
+                <div class="nos-stats">
+                    <div><strong>+3.200</strong><span>productos en catálogo</span></div>
+                    <div><strong>+600</strong><span>ferreterías clientas</span></div>
+                    <div><strong>8</strong><span>marcas líderes</span></div>
+                    <div><strong>48hs</strong><span>entrega CABA/GBA</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Marcas -->
+        <section class="nos-section nos-marcas">
+            <div class="wrap">
+                <span class="eyebrow">Marcas que trabajamos</span>
+                <h2 class="nos-titulo">De la línea industrial a la de uso hogareño</h2>
+                <p class="nos-sub">Elegimos marcas con repuestos, service y garantía, para que lo que vendés no te vuelva como reclamo. Tenemos opciones para el profesional que usa la herramienta todos los días y para el cliente que la necesita un fin de semana.</p>
+                <div class="marcas-grid">
+                    <div class="marcas"><img src="assets/images.jpeg" alt="Barovo"></div>
+                    <div class="marcas"><img src="assets/bosch.png" alt="Bosch"></div>
+                    <div class="marcas"><img src="assets/milwakie.jpeg" alt="Milwaukee"></div>
+                    <div class="marcas"><img src="assets/total.png" alt="Total"></div>
+                    <div class="marcas"><img src="assets/ronix.jpeg" alt="Ronix"></div>
+                    <div class="marcas"><img src="assets/black.png" alt="Black+Decker"></div>
+                    <div class="marcas"><img src="assets/de walt.jpeg" alt="DeWalt"></div>
+                    <div class="marcas"><img src="assets/makita.jpeg" alt="Makita"></div>
+                </div>
+                <p class="marcas-nota">// ¿Buscás una marca que no ves acá? Consultanos: la conseguimos.</p>
+            </div>
+        </section>
+
+        <!-- 3. Soluciones -->
+        <section class="nos-section">
+            <div class="wrap">
+                <span class="eyebrow">Soluciones</span>
+                <h2 class="nos-titulo">Todo lo que tu ferretería necesita, en un solo proveedor</h2>
+                <div class="soluciones-grid">
+                    <article class="solucion">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <h3>Venta mayorista y minorista</h3>
+                        <p>Listas de precios por volumen, actualizadas todos los meses, y compras chicas cuando solo necesitás reponer.</p>
+                    </article>
+                    <article class="solucion">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Asesoramiento técnico</h3>
+                        <p>Te ayudamos a elegir la herramienta, el accesorio o el consumible correcto para cada trabajo y cada cliente.</p>
+                    </article>
+                    <article class="solucion">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <h3>Reposición programada</h3>
+                        <p>Definimos juntos tu stock crítico (mechas, discos, fijaciones) y lo reponemos antes de que se note el faltante.</p>
+                    </article>
+                    <article class="solucion">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Envíos a todo el país</h3>
+                        <p>Entrega en 48hs en CABA y GBA, y despachos por transporte al resto del país con seguimiento.</p>
+                    </article>
+                    <article class="solucion">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Garantía y postventa</h3>
+                        <p>Si algo falla, lo gestionamos nosotros con la marca. Vos no perdés tiempo ni al cliente.</p>
+                    </article>
+                    <article class="solucion">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Armado de surtido</h3>
+                        <p>Te sugerimos qué exhibir según tu zona y tu público, para que el mostrador venda solo.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Asesoramiento -->
+        <section class="nos-section nos-asesoria">
+            <div class="wrap asesoria-grid">
+                <div>
+                    <span class="eyebrow">Asesoramiento</span>
+                    <h2 class="nos-titulo">Un asesor comercial que conoce tu negocio</h2>
+                    <p class="nos-sub">Cada cuenta tiene una persona asignada. No hablás con un bot ni con un call center: hablás con alguien que sabe qué compraste el mes pasado y qué te conviene ahora.</p>
+                    <div class="asesor-card">
+                        <p>"Nos ayudaron a ordenar el surtido de accesorios. Sacamos lo que no rotaba y sumamos lo que la gente venía a pedir."</p>
+                        <span>— Ferretería cliente, zona oeste</span>
+                    </div>
+                </div>
+                <ol class="pasos">
+                    <li>
+                        <h3>Te escuchamos</h3>
+                        <p>Nos contás qué vendés, a qué público y cuáles son los productos que más te piden.</p>
+                    </li>
+                    <li>
+                        <h3>Analizamos tu rotación</h3>
+                        <p>Revisamos qué se mueve y qué queda parado, para que tu plata no esté inmovilizada en stock.</p>
+                    </li>
+                    <li>
+                        <h3>Armamos la propuesta</h3>
+                        <p>Un presupuesto a medida, con marcas y precios según tu margen y tu tipo de cliente.</p>
+                    </li>
+                    <li>
+                        <h3>Te acompañamos</h3>
+                        <p>Reposición, novedades de las marcas y seguimiento: seguimos ahí después de la primera compra.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 5. Galería -->
+        <section class="nos-section">
+            <div class="wrap">
+                <span class="eyebrow">Catálogo</span>
+                <h2 class="nos-titulo">Parte de lo que tenemos en stock</h2>
+                <div class="gallery">
+                    <img class="gallery-item" src="assets/7863051-1-amoladora-angular-bosch-9-pulgadas-gws-20-230-2000w-02f5c21ff429ed893715955344651538-640-0.jpg" alt="Amoladora angular Bosch">
+                    <img class="gallery-item" src="assets/638434286704555462.webp" alt="Línea de herramientas Ronix">
+                    <img class="gallery-item" src="assets/images (5).jpeg" alt="Set de herramientas Total">
+                    <img class="gallery-item" src="assets/images (2).jpeg" alt="Organizadores Milwaukee Packout">
+                    <img class="gallery-item" src="assets/images (4).jpeg" alt="Amoladora inalámbrica Milwaukee">
+                    <img class="gallery-item" src="assets/images (6).jpeg" alt="Taladro inalámbrico Total">
+                    <img class="gallery-item" src="assets/images (7).jpeg" alt="Juego de llaves combinadas Total">
+                    <img class="gallery-item" src="assets/images (1).jpeg" alt="Herramienta DeWalt">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Llamado a la acción -->
+        <section class="nos-cta">
+            <div class="wrap">
+                <h2>¿Querés que tu ferretería no se quede nunca sin stock?</h2>
+                <div class="acciones">
+                    <a href="./contacto.html" class="btn btn-dark">Hablar con un asesor</a>
+                    <a href="./productos.html" class="btn btn-light">Ver productos</a>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <ul class="footer-nav">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>               
-            </ul>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </footer>
+    <script src="JS/carrito.js"></script>
 </body>
+</html>

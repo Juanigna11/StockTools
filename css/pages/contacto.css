@@ -1,6 +1,15 @@
-h2{
+.contacto {
+    padding: 80px 0;
+}
+
+.contacto h2{
     color: var(--text);
     font-size: 50px;
+}
+
+.contacto p {
+    line-height: 1.55;
+    color: var(--text-soft);
 }
 
 .contacto-grid {
@@ -9,70 +18,16 @@ h2{
     gap: 50px;
 }
 
-.wrap {
-    max-width: 1180px;
-    margin: 0px auto;
-    padding: 0px 24px;
+.section-sub {
+    max-width: 520px;
+    margin-top: -8px;
 }
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 150px 0 0 0;
-}
-
-.contacto {
-    padding: 80px 0;
-}
-
-@media (max-width: 900px) {
-    .hero-grid, .mayoristas-grid, .contacto-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-
 
 .contact-form {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-}
-
-form {
-    display: block;
-    margin-top: 0em;
-    unicode-bidi: isolate;
-}
-
-.info-card {
-    background: #fff;
-    border-radius: var(--radius-md);
-    padding: 20px;
-    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
-}
-
-.info-card {
-    background: #fff;
-    border-radius: var(--radius-md);
-    padding: 20px;
-    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
-}
-
-.section-sub {
-    max-width: 520px;
-    margin-top: -8px;
-}
-
-p {
-    line-height: 1.55;
-    color: var(--text-soft);
 }
 
 .form-row {
@@ -91,19 +46,32 @@ p {
     resize: vertical;
 }
 
-.btn-accent {
-    background: var(--green);
-    color: #12210a;
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 150px 0 0 0;
 }
 
-.btn {
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-family: var(--body);
-    font-weight: 600;
-    font-size: .95rem;
-    padding: 14px 28px;
-    border-radius: var(--radius-sm);
-    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+.info-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(34, 38, 43, .06);
+}
+
+.info-card strong, .info-card span{
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .hero-grid, .mayoristas-grid, .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info{
+        padding-top: 0;
+    }
+    .form-row{
+        flex-direction: column;
+    }
 }

@@ -1,0 +1,340 @@
+/* =====================================================
+   inicio.css — secciones nuevas del inicio (.ini-*)
+   + oferta de la semana y detalles de la portada.
+   ===================================================== */
+
+/* ===== Portada: sugerencias y números ===== */
+.hero-sugerencias{
+    font-family: var(--body);
+    font-size: .9rem;
+    font-weight: 500;
+    color: #e3e6df;
+    margin: -12px 0 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-sugerencias a{
+    padding: 4px 12px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: rgba(34, 38, 43, .35);
+    color: #fff;
+    transition: background .2s, border-color .2s;
+}
+
+.hero-sugerencias a:hover{
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--dark);
+}
+
+.hero-stats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.hero-stats div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 26px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+}
+
+.hero-stats div:first-child{
+    padding-left: 0;
+    border-left: none;
+}
+
+.hero-stats strong{
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.hero-stats span{
+    font-family: var(--body);
+    font-size: .85rem;
+    color: #d9dcd5;
+}
+
+/* ===== Oferta de la semana (columna derecha de la portada) ===== */
+.oferta-semana{
+    justify-self: end;
+    width: min(340px, 100%);
+    background: var(--paper-2);
+    border-radius: var(--radius-lg);
+    padding: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+    border-bottom: 6px solid var(--green);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transform: rotate(1.5deg);           /* un toque "pegado en la pared" */
+    transition: transform .3s;
+}
+
+.oferta-semana:hover{
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.oferta-semana:empty{
+    display: none;
+}
+
+.oferta-etiqueta{
+    align-self: flex-start;
+    background: var(--yellow);
+    color: var(--dark);
+    font-family: var(--mono);
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.oferta-semana img{
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin: 8px 0;
+}
+
+.oferta-nombre{
+    font-family: var(--body);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--dark);
+}
+
+.oferta-precios{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.oferta-precios s{
+    font-family: var(--body);
+    font-size: .85rem;
+    color: var(--steel);
+}
+
+.oferta-precio{
+    font-family: var(--display);
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+/* ===== Beneficios ===== */
+.ini-beneficios{
+    background: var(--paper-2);
+    border-bottom: 1px solid rgba(34, 38, 43, .08);
+}
+
+.ini-beneficios-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ini-beneficios-grid > div{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 20px;
+    border-left: 1px solid rgba(34, 38, 43, .08);
+}
+
+.ini-beneficios-grid > div:first-child{
+    border-left: none;
+}
+
+.ini-beneficios i{
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--dark);
+    color: var(--green);
+    font-size: 1.1rem;
+}
+
+.ini-beneficios p{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body);
+    line-height: 1.3;
+}
+
+.ini-beneficios strong{
+    color: var(--dark);
+}
+
+.ini-beneficios span{
+    font-size: .85rem;
+    color: var(--text-soft);
+}
+
+/* ===== Secciones genéricas ===== */
+.ini-seccion{
+    padding: 64px 0;
+}
+
+.ini-destacados{
+    padding-top: 0;
+}
+
+.ini-encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+}
+
+.ini-titulo{
+    color: var(--dark);
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.ini-ver-todo{
+    font-family: var(--body);
+    font-weight: 600;
+    color: var(--green-deep);
+    border-bottom: 2px solid transparent;
+    transition: border-color .2s;
+}
+
+.ini-ver-todo:hover{
+    border-color: var(--green);
+}
+
+/* ===== Categorías ===== */
+.ini-categorias{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.ini-categoria{
+    background: var(--paper-2);
+    border-radius: var(--radius-md);
+    padding: 18px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color .2s, transform .2s;
+}
+
+.ini-categoria:hover{
+    border-color: var(--green);
+    transform: translateY(-3px);
+}
+
+.ini-categoria img{
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.ini-categoria strong{
+    font-size: 1.25rem;
+    color: var(--dark);
+    line-height: 1.1;
+}
+
+.ini-categoria span{
+    font-family: var(--mono);
+    font-size: .75rem;
+    color: var(--steel);
+}
+
+/* ===== Marcas ===== */
+.ini-marcas{
+    padding: 56px 0;
+    text-align: center;
+}
+
+.ini-marcas-titulo{
+    font-family: var(--mono);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--steel);
+    margin-bottom: 1.5rem;
+}
+
+.ini-marcas-fila{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.ini-marcas-fila img{
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    filter: grayscale(1);
+    opacity: .75;
+    transition: filter .25s, opacity .25s, transform .25s;
+}
+
+.ini-marcas-fila img:hover{
+    filter: none;
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+    .oferta-semana{
+        justify-self: start;
+        transform: none;
+    }
+    .ini-beneficios-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ini-beneficios-grid > div:nth-child(3){
+        border-left: none;
+    }
+}
+
+@media (max-width: 520px){
+    .ini-beneficios-grid{
+        grid-template-columns: 1fr;
+    }
+    .ini-beneficios-grid > div{
+        border-left: none;
+        border-top: 1px solid rgba(34, 38, 43, .08);
+        padding: 16px 0;
+    }
+    .hero-stats{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-stats div{
+        padding: 0 10px;
+    }
+    .hero-stats strong{
+        font-size: 1.5rem;
+    }
+}
